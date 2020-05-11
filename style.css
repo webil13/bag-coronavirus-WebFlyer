@@ -3,6 +3,7 @@
     --bg-color: #e5007d;
     --green-color: #12a537;
     --yellow-color:  #ffed00;
+    --overlay-bg: rgba(0,0,0,.9);
     /* Text colors */
     --text-light: #fff;
     /* Text sizes */
@@ -22,6 +23,8 @@
     /* Card related measures */
     --card-heading-height: 60px;
     --card-description-height: 75px;
+    /* Video */
+    --video-container-max-width: 1000px;
 }
 /* Basic Reset */
 *{
@@ -200,6 +203,56 @@ header{
     font-size: 1.2em;
     margin-top: 15px;
 } /* end Subhero section */
+/* Video Overlay */
+.video-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--overlay-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.active{
+    display: flex;
+}
+.embed-container{
+    background-color: rgba(255,255,255,.3);
+    padding: var(--padding);
+    width: 90%;
+    max-width: var(--video-container-max-width);
+    height: auto;
+    position: relative;
+}
+.close-btn{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.close-btn:hover, .close-btn:active, .close-btn:focus{
+    color: var(--text-light);
+    background-color: var(--overlay-bg);
+}
+.embed-container iframe{
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+}
+
 /* Footer section with rounded banner */
 footer{
     position: relative;
