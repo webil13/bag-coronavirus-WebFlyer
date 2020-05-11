@@ -43,4 +43,5 @@ function setVideoSrc(url){
 // Close Video Overlay
 closeBtn.addEventListener('click', () => {
     videoOverlay.classList.remove('active')
+    videoIframe.setAttribute('src', '')
 })
