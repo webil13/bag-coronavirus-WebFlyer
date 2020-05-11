@@ -148,6 +148,7 @@ header{
     border-radius: 50%;
     border: 2px solid var(--green-color);
     transition: var(--transition);
+    cursor: pointer;
 }
 .card-play-btn span{
     transform: translate(1px,1px);
