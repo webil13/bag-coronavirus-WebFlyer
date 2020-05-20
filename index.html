@@ -1,92 +1,145 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>So schützen wir uns</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- FontAwesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/8b8365058e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header>
-        <div class="top-banner">
-            <span>Neues Coronavirus</span>
-            <span>Aktualisiert am 29. April 2020</span>
+      <div class="top-banner">
+        <span>Neues Coronavirus</span>
+        <span>Aktualisiert am 29. April 2020</span>
+      </div>
+      <nav class="header-banner">
+        <div class="shield">
+          <p>
+            So schützen <br />
+            wir uns.
+          </p>
+          <p class="check">
+            <span><i class="fas fa-check"></i></span>
+          </p>
         </div>
-        <nav class="header-banner">
-            <div class="shield">
-                <p>So schützen <br> wir uns.</p>
-                <p class="check"><span>&#10004;</span></p>
-            </div>
-        </nav>
+      </nav>
     </header>
     <main class="main">
-        <section class="hero">
-            <div class="card">
-                <div class="card-heading">Abstand halten.</div>
-                <img src="./images/distance.png" class="card-img">
-                <a class="card-play-btn distance"><span>&#9658;</span></a>
-            </div>
-            <div class="card">
-                <div class="card-heading">Empfehlung: Maske tragen, wenn <br> Abstandhalten nicht möglich ist.</div>
-                <img src="./images/mask.png" class="card-img">
-                <a class="card-play-btn mask"><span>&#9658;</span></a>
-            </div>
-            <div class="card">
-                <div class="card-heading">Falls möglich weiter im<br> Homeoffice arbeiten.</div>
-                <img src="./images/homeoffice.png" class="card-img">
-                <a class="card-play-btn homeoffice"><span>&#9658;</span></a>
-            </div>
-        </section>
-        <section class="subhero">
-                <p class="still-important">weiterhin wichtig:</p>
-                <div class="subhero-cards-wrapper">
-                    <div class="card">
-                        <div class="card-check"><span>&#10004;</span></div>
-                        <img src="./images/hands.png" class="card-img">
-                        <a class="card-play-btn hands"><span>&#9658;</span></a>
-                        <p class="card-description">Gründlich Hände waschen.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-check"><span>&#10004;</span></div>
-                        <img src="./images/handshake.png" class="card-img">
-                        <a class="card-play-btn handshake"><span>&#9658;</span></a>
-                        <p class="card-description">Hände schütteln vermeiden.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-check"><span>&#10004;</span></div>
-                        <img src="./images/cough.png" class="card-img">
-                        <a class="card-play-btn cough"><span>&#9658;</span></a>
-                        <p class="card-description">In Taschentuch oder Armbeuge husten und niesen.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-check"><span>&#10004;</span></div>
-                        <img src="./images/home.png" class="card-img">
-                        <a class="card-play-btn home"><span>&#9658;</span></a>
-                        <p class="card-description">Bei Symptomen zuhause bleiben.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-check"><span>&#10004;</span></div>
-                        <img src="./images/telmed.png" class="card-img">
-                        <a class="card-play-btn telmed"><span>&#9658;</span></a>
-                        <p class="card-description">Nur telefonisch Anmelden zum Arzt.</p>
-                    </div>
-                </div>
-        </section>
-        <div class="video-overlay">
-            <div class="embed-container">
-                <div class="close-btn">X</div>
-                <iframe id="video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+      <section class="hero">
+        <div class="card">
+          <div class="card-heading">Abstand halten.</div>
+          <img src="./images/distance.png" class="card-img" />
+          <a class="card-play-btn distance"
+            ><span><i class="fas fa-play"></i></span
+          ></a>
         </div>
+        <div class="card">
+          <div class="card-heading">
+            Empfehlung: Maske tragen, wenn <br />
+            Abstandhalten nicht möglich ist.
+          </div>
+          <img src="./images/mask.png" class="card-img" />
+          <a class="card-play-btn mask"
+            ><span><i class="fas fa-play"></i></span
+          ></a>
+        </div>
+        <div class="card">
+          <div class="card-heading">
+            Falls möglich weiter im<br />
+            Homeoffice arbeiten.
+          </div>
+          <img src="./images/homeoffice.png" class="card-img" />
+          <a class="card-play-btn homeoffice"
+            ><span><i class="fas fa-play"></i></span
+          ></a>
+        </div>
+      </section>
+      <section class="subhero">
+        <p class="still-important">weiterhin wichtig:</p>
+        <div class="subhero-cards-wrapper">
+          <div class="card">
+            <div class="card-check">
+              <span><i class="fas fa-check"></i></span>
+            </div>
+            <img src="./images/hands.png" class="card-img" />
+            <a class="card-play-btn hands"
+              ><span><i class="fas fa-play"></i></span
+            ></a>
+            <p class="card-description">Gründlich Hände waschen.</p>
+          </div>
+          <div class="card">
+            <div class="card-check">
+              <span><i class="fas fa-check"></i></span>
+            </div>
+            <img src="./images/handshake.png" class="card-img" />
+            <a class="card-play-btn handshake"
+              ><span><i class="fas fa-play"></i></span
+            ></a>
+            <p class="card-description">Hände schütteln vermeiden.</p>
+          </div>
+          <div class="card">
+            <div class="card-check">
+              <span><i class="fas fa-check"></i></span>
+            </div>
+            <img src="./images/cough.png" class="card-img" />
+            <a class="card-play-btn cough"
+              ><span><i class="fas fa-play"></i></span
+            ></a>
+            <p class="card-description">
+              In Taschentuch oder Armbeuge husten und niesen.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-check">
+              <span><i class="fas fa-check"></i></span>
+            </div>
+            <img src="./images/home.png" class="card-img" />
+            <a class="card-play-btn home"
+              ><span><i class="fas fa-play"></i></span
+            ></a>
+            <p class="card-description">Bei Symptomen zuhause bleiben.</p>
+          </div>
+          <div class="card">
+            <div class="card-check">
+              <span><i class="fas fa-check"></i></span>
+            </div>
+            <img src="./images/telmed.png" class="card-img" />
+            <a class="card-play-btn telmed"
+              ><span><i class="fas fa-play"></i></span
+            ></a>
+            <p class="card-description">Nur telefonisch Anmelden zum Arzt.</p>
+          </div>
+        </div>
+      </section>
+      <div class="video-overlay">
+        <div class="embed-container">
+          <div class="close-btn">X</div>
+          <iframe
+            id="video"
+            src=""
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </main>
     <footer>
-        <div class="footer-banner">
-            <div class="shield">
-                <a href="https:www.bag-coronavirus.ch" target="_blank">www.bag-coronavirus.ch</a>
-            </div>
+      <div class="footer-banner">
+        <div class="shield">
+          <a href="https:www.bag-coronavirus.ch" target="_blank"
+            >www.bag-coronavirus.ch</a
+          >
         </div>
+      </div>
     </footer>
     <script src="video-popup.js"></script>
-</body>
+  </body>
 </html>
