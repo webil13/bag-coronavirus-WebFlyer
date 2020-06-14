@@ -12,36 +12,38 @@
       src="https://kit.fontawesome.com/8b8365058e.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Language Switcher -->
+    <script src="internationalize.js" defer></script>
   </head>
   <body>
     <header>
       <div class="top-banner">
-        <span>Neues Coronavirus</span>
-        <span>Aktualisiert am 29. April 2020</span>
+        <span id="top-left">Neues Coronavirus</span>
+        <span id="top-right">Aktualisiert am 29. April 2020</span>
       </div>
       <nav class="header-banner">
         <div class="shield">
           <p>
-            So schützen <br />
-            wir uns.
+            <span id="shield-text-top">So schützen</span> <br />
+            <span id="shield-text-bottom">wir uns.</span>
           </p>
           <p class="check">
             <span><i class="fas fa-check"></i></span>
           </p>
         </div>
         <div class="lang-menu">
-          <span class="lang-item" id="de" value="de">DE</span>
-          <span class="lang-item" id="fr" value="fr">FR</span>
-          <span class="lang-item" id="it" value="it">IT</span>
-          <span class="lang-item" id="en" value="en">EN</span>
-          <span class="lang-item" id="rr" value="rr">RR</span>
+          <span class="lang-item lang-chosen" id="de" lang="de">DE</span>
+          <span class="lang-item" id="fr" lang="fr">FR</span>
+          <span class="lang-item" id="it" lang="it">IT</span>
+          <span class="lang-item" id="en" lang="en">EN</span>
+          <span class="lang-item" id="rr" lang="rr">RR</span>
         </div>
       </nav>
     </header>
     <main class="main">
       <section class="hero">
         <div class="card">
-          <div class="card-heading">Abstand halten.</div>
+          <div class="card-heading" id="distance">Abstand halten.</div>
           <img src="./images/distance.png" class="card-img" />
           <a class="card-play-btn distance"
             ><span><i class="fas fa-play"></i></span
@@ -49,8 +51,8 @@
         </div>
         <div class="card">
           <div class="card-heading">
-            Empfehlung: Maske tragen, wenn <br />
-            Abstandhalten nicht möglich ist.
+            <span id="mask-top">Empfehlung: Maske tragen, wenn</span> <br />
+            <span id="mask-bottom">Abstandhalten nicht möglich ist.</span>
           </div>
           <img src="./images/mask.png" class="card-img" />
           <a class="card-play-btn mask"
@@ -58,9 +60,9 @@
           ></a>
         </div>
         <div class="card">
-          <div class="card-heading">
-            Falls möglich weiter im<br />
-            Homeoffice arbeiten.
+          <div class="card-heading" id="homeoffice">
+            <span id="homeoffice-top">Falls möglich weiter im</span><br />
+            <span id="homeoffice-bottom">Homeoffice arbeiten.</span>
           </div>
           <img src="./images/homeoffice.png" class="card-img" />
           <a class="card-play-btn homeoffice"
@@ -69,7 +71,7 @@
         </div>
       </section>
       <section class="subhero">
-        <p class="still-important">weiterhin wichtig:</p>
+        <p class="still-important" id="important-note">weiterhin wichtig:</p>
         <div class="subhero-cards-wrapper">
           <div class="card">
             <div class="card-check">
@@ -79,7 +81,7 @@
             <a class="card-play-btn hands"
               ><span><i class="fas fa-play"></i></span
             ></a>
-            <p class="card-description">Gründlich Hände waschen.</p>
+            <p class="card-description" id="hands">Gründlich Hände waschen.</p>
           </div>
           <div class="card">
             <div class="card-check">
@@ -89,7 +91,9 @@
             <a class="card-play-btn handshake"
               ><span><i class="fas fa-play"></i></span
             ></a>
-            <p class="card-description">Hände schütteln vermeiden.</p>
+            <p class="card-description" id="handshake">
+              Hände schütteln vermeiden.
+            </p>
           </div>
           <div class="card">
             <div class="card-check">
@@ -99,7 +103,7 @@
             <a class="card-play-btn cough"
               ><span><i class="fas fa-play"></i></span
             ></a>
-            <p class="card-description">
+            <p class="card-description" id="cough">
               In Taschentuch oder Armbeuge husten und niesen.
             </p>
           </div>
@@ -111,7 +115,9 @@
             <a class="card-play-btn home"
               ><span><i class="fas fa-play"></i></span
             ></a>
-            <p class="card-description">Bei Symptomen zuhause bleiben.</p>
+            <p class="card-description" id="home">
+              Bei Symptomen zuhause bleiben.
+            </p>
           </div>
           <div class="card">
             <div class="card-check">
@@ -121,13 +127,16 @@
             <a class="card-play-btn telmed"
               ><span><i class="fas fa-play"></i></span
             ></a>
-            <p class="card-description">Nur telefonisch Anmelden zum Arzt.</p>
+            <p class="card-description" id="telmed">
+              Nur nach telefonischer Anmeldung in Arztpraxis oder
+              Notfallstation.
+            </p>
           </div>
         </div>
       </section>
       <div class="video-overlay">
+        <i class="fas fa-times-circle close-btn"></i>
         <div class="embed-container">
-          <div class="close-btn">X</div>
           <iframe
             id="video"
             src=""
@@ -141,7 +150,10 @@
     <footer>
       <div class="footer-banner">
         <div class="shield">
-          <a href="https:www.bag-coronavirus.ch" target="_blank"
+          <a
+            id="footer-link"
+            href="https:www.bag-coronavirus.ch"
+            target="_blank"
             >www.bag-coronavirus.ch</a
           >
         </div>
