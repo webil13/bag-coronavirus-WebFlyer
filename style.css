@@ -111,11 +111,18 @@ header {
 }
 
 .lang-menu {
+  display: flex;
+  flex-wrap: wrap;
   margin-right: 6vw;
   color: var(--text-light);
+  z-index: 3;
 }
 .lang-item {
+  display: grid;
+  place-items: center;
+  margin: 0 0.3ch;
   padding: 3px;
+  min-width: 30px;
   border-radius: 6px;
   border: 1px solid var(--text-light);
   transition: var(--transition);
@@ -146,6 +153,10 @@ header {
   padding: var(--padding);
 }
 
+.card-img {
+  max-height: 36vh;
+}
+
 /* Hero section */
 
 .hero {
@@ -158,7 +169,6 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-end;
 }
 
@@ -166,7 +176,7 @@ header {
   font-size: 1.5em;
 }
 
-.card-heading {
+.hero .card-heading {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -182,12 +192,12 @@ header {
   transform: translate(-5%, 39%);
 }
 
-.card-img {
+.hero .card-img {
   width: 100%;
   height: auto;
 }
 
-.card-play-btn {
+.hero .card-play-btn {
   position: absolute;
   bottom: 3%;
   left: 50%;
@@ -206,12 +216,12 @@ header {
   cursor: pointer;
 }
 
-.card-play-btn span {
+.hero .card-play-btn span {
   transform: translate(1px, 1px);
 }
 
-.card-play-btn:hover,
-.card-play-btn:focus {
+.hero .card-play-btn:hover,
+.hero .card-play-btn:focus {
   outline: none;
   background-color: var(--green-color);
   color: var(--text-light);
@@ -235,8 +245,9 @@ header {
 
 .subhero-cards-wrapper {
   display: grid;
+  place-items: start;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 0 calc(var(--padding) / 2);
+  grid-gap: 2em;
 }
 
 .card-check {
@@ -258,11 +269,24 @@ header {
 
 .subhero .card-play-btn {
   position: absolute;
-  left: 88%;
-  bottom: calc(6.3% + var(--card-description-height));
+  left: 45%;
+  bottom: calc(5px + var(--card-description-height)) !important;
+  color: var(--green-color);
+  border-radius: 50%;
+  border: 1px solid var(--green-color);
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.card-description {
+.subhero .card-heading {
+  display: flex;
+  flex-wrap: wrap;
+}
+.subhero .card-img {
+  width: 240px;
+}
+
+.subhero .card-description {
   display: flex;
   min-height: var(--card-description-height);
   padding: 0 5px;
@@ -289,6 +313,7 @@ header {
   align-items: center;
   justify-content: center;
   display: none;
+  z-index: 20;
 }
 
 .active {
@@ -312,12 +337,15 @@ header {
   cursor: pointer;
   transition: var(--transition);
   z-index: 200;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .close-btn:hover,
 .close-btn:active,
 .close-btn:focus {
   color: var(--text-light);
+  background-color: #000;
 }
 
 .embed-container iframe {
@@ -351,11 +379,66 @@ footer {
 
 /* Media Queries */
 
+/* Phone Size */
+
+@media (max-width: 500px) {
+  .lang-menu {
+    position: absolute;
+    top: 7ch;
+    right: 1ch;
+    z-index: 10;
+    flex-direction: column;
+    gap: 0.6ch;
+  }
+  .main {
+    padding: 0 var(--padding);
+    top: var(--header-height);
+    margin-bottom: 5em;
+  }
+  .hero .card img {
+    max-height: 36vh;
+    width: auto;
+  }
+  .hero .card-heading {
+    width: auto;
+    height: auto;
+    transform: translate(-2%, 39%);
+  }
+
+  .subhero-cards-wrapper {
+    place-items: center;
+  }
+  .subhero .card-heading {
+    max-width: 36vh;
+  }
+  .subhero .card img {
+    max-height: 36vh;
+    width: auto;
+  }
+  .subhero .card-play-btn {
+    bottom: var(--card-description-height);
+  }
+  .subhero .card-description {
+    max-width: 36vh;
+    min-height: 40px;
+    margin-top: 6px;
+  }
+  .footer-banner .shield {
+    min-width: 330px;
+    padding: 0 0 0 var(--padding);
+    font-size: 0.9em;
+  }
+}
+
 /* Tablet Size */
 
 @media (max-width: 725px) {
   .hero {
     grid-gap: 12px var(--padding);
+  }
+  .hero .card {
+    width: 72vw;
+    height: 100%;
   }
   .card-heading {
     padding: 12px 27px;
@@ -367,30 +450,5 @@ footer {
   .footer-banner .shield {
     min-width: 400px;
     font-size: 1em;
-  }
-}
-
-/* Phone Size */
-
-@media (max-width: 480px) {
-  .main {
-    padding: 0 var(--padding);
-    top: var(--header-height);
-  }
-  .card-heading {
-    width: 90%;
-    transform: translate(-12%, 39%);
-  }
-  .subhero .card-play-btn {
-    bottom: var(--card-description-height);
-  }
-  .card-description {
-    min-height: 40px;
-    margin-top: 6px;
-  }
-  .footer-banner .shield {
-    min-width: 330px;
-    padding: 0 0 0 var(--padding);
-    font-size: 0.9em;
   }
 }
